@@ -690,7 +690,7 @@
     <div class="qa" style="padding-top:10px;">
       <div class="hero-badge">✦ Monday April 20th · Sacramento</div>
       <div class="hero-title">4/20</div>
-      <div class="hero-year">SALE 2025</div>
+      <div class="hero-year">SALE 2026</div>
       <div class="hero-desc">
         Complete your <strong>NorCal Fan Checklist</strong> to unlock exclusive rewards and find out your fan tier before 4/20.
       </div>
@@ -791,7 +791,7 @@
         First 100 orders unlock a <strong>$100 goodie bag</strong>. Add 4/20 to your calendar now — wake up ready.
       </div>
       <div style="width:100%; background:var(--gold-glow); border:1px solid rgba(242,194,48,.25); border-radius:13px; padding:18px; text-align:center; margin-bottom:22px;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold);letter-spacing:.05em;">APRIL 20, 2025</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold);letter-spacing:.05em;">APRIL 20, 2026</div>
         <div style="font-size:13px;color:var(--fog);margin-top:3px;">Monday · Orders Open 6:00 AM</div>
         <div style="font-size:11px;color:var(--mist);margin-top:8px;">🔔 Alerts: 12 hrs before · 15 min before</div>
       </div>
@@ -980,7 +980,7 @@ function addApple() {
   const ics = [
     'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//NorCal Holistics//420//EN',
     'BEGIN:VEVENT',
-    'DTSTART:20250420T060000','DTEND:20250420T210000',
+    'DTSTART:20260420T060000','DTEND:20260420T210000',
     'SUMMARY:NorCal Holistics 4/20 Sale',
     'DESCRIPTION:Orders open at 6AM! First 100 get a $100 goodie bag.\\nText only: 916-993-5361.\\nnorcalholistics.com',
     'BEGIN:VALARM','TRIGGER:-PT720M','ACTION:DISPLAY','DESCRIPTION:NorCal 4/20 Sale tomorrow at 6AM!','END:VALARM',
@@ -997,7 +997,7 @@ function addApple() {
 }
 function addGoogle() {
   const t = encodeURIComponent('NorCal Holistics 4/20 Sale');
-  const d = '20250420T060000%2F20250420T210000';
+  const d = '20260420T060000%2F20260420T210000';
   const details = encodeURIComponent('First 100 orders = $100 goodie bag!\nText 916-993-5361.\nnorcalholistics.com');
   window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${t}&dates=${d}&details=${details}`, '_blank');
   closeCal(); stampAlarm(true);
