@@ -1,0 +1,23 @@
+{
+  "name": "norcal-420-lp",
+  "version": "1.0.0",
+  "description": "NorCal Holistics 4/20 Fan Registration Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biz-sierra/norcal-420-lp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biz-sierra/norcal-420-lp/issues"
+  },
+  "homepage": "https://github.com/biz-sierra/norcal-420-lp#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
