@@ -645,6 +645,42 @@
     }
 
     /* ══════════════════════════════════════
+       AGE GATE
+    ══════════════════════════════════════ */
+    .age-gate {
+      position:fixed; inset:0; z-index:999;
+      background:var(--ink);
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      padding:24px;
+      text-align:center;
+    }
+    .age-gate.dismissed { display:none; }
+    .age-gate-logo { font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:.22em; color:var(--gold); margin-bottom:28px; }
+    .age-gate-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(36px,10vw,54px); color:var(--white); line-height:1; margin-bottom:10px; }
+    .age-gate-sub { font-size:14px; color:var(--fog); max-width:300px; margin-bottom:28px; line-height:1.5; }
+    .age-gate-warn { font-size:11px; color:var(--mist); max-width:280px; line-height:1.5; margin-top:20px; }
+    .age-gate-deny { font-size:13px; color:var(--mist); margin-top:14px; cursor:pointer; background:none; border:none; }
+    .age-gate-deny:hover { color:var(--fog); }
+
+    /* ══════════════════════════════════════
+       HEALTH WARNING FOOTER
+    ══════════════════════════════════════ */
+    .health-warning {
+      position:fixed; bottom:0; left:0; right:0; z-index:90;
+      background:rgba(7,15,8,0.92);
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding:8px 16px;
+      text-align:center;
+      font-size:10px;
+      color:var(--mist);
+      letter-spacing:.02em;
+      line-height:1.4;
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+    }
+
+    /* ══════════════════════════════════════
        CELEBRATION FLASH
     ══════════════════════════════════════ */
     .cel {
@@ -664,6 +700,20 @@
   </style>
 </head>
 <body>
+
+<!-- AGE GATE -->
+<div class="age-gate" id="ageGate">
+  <div class="age-gate-logo">NORCAL HOLISTICS</div>
+  <div class="age-gate-title">ARE YOU 21+?</div>
+  <div class="age-gate-sub">You must be at least 21 years old to view this content and participate in the 4/20 event.</div>
+  <button class="btn-gold" onclick="confirmAge()">Yes, I'm 21 or Older</button>
+  <button class="age-gate-deny" onclick="denyAge()">No, I'm Under 21</button>
+  <div class="age-gate-warn">For use only by adults 21 and older. Keep out of reach of children.</div>
+</div>
+
+<!-- HEALTH WARNING FOOTER -->
+<div class="health-warning">For use only by adults 21 and older. Keep out of reach of children. | License: C9-0000013-LIC</div>
+
 <div class="app">
 
   <!-- FX LAYER -->
@@ -728,7 +778,7 @@
             <div class="t-val">$129 value</div>
           </div>
         </div>
-        <div class="gt-fine">Only <strong>3 tickets exist</strong> — randomly placed in NorCal products.<br>Order any NorCal item on 4/20 and you're in the draw.</div>
+        <div class="gt-fine">Only <strong>3 tickets exist</strong> — randomly placed in NorCal products.<br>Order any NorCal item on 4/20 and you're in the draw.<br><span style="font-size:10px;opacity:.6;">No purchase necessary. Free entry via mail-in. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a>.</span></div>
       </div>
       <div class="gt-cta">
         <button class="btn-gt" onclick="closeGT()">I'm In — Show Me My Results →</button>
@@ -781,7 +831,22 @@
 
       <button class="btn-gold" onclick="goTo(1)">Start My Checklist →</button>
       <div style="font-size:12px;color:var(--mist);margin-top:8px;">Takes about 60 seconds</div>
-      <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;">*Purchase not necessary to enter. See full rules on our website.</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;">*No purchase necessary to enter or win. <a href="#freeEntry" onclick="event.preventDefault();document.getElementById('freeEntrySection').style.display='block';this.style.display='none';" style="color:var(--gold);opacity:.6;text-decoration:underline;">Free entry method available.</a> See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.6;">Official Rules</a>.</div>
+
+      <div id="freeEntrySection" style="display:none; width:100%; max-width:340px; margin-top:16px; background:var(--card-bg); border:1px solid var(--card-bdr); border-radius:11px; padding:16px; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:.15em; color:var(--gold); margin-bottom:8px;">FREE ENTRY METHOD</div>
+        <div style="font-size:12px; color:var(--fog); line-height:1.55; margin-bottom:4px;">
+          To enter the Golden Ticket Sweepstakes without making a purchase, hand-print your full name, phone number, and the words "Golden Ticket Entry" on a 3"×5" card and mail it to:
+        </div>
+        <div style="font-size:12px; color:var(--white); line-height:1.55; margin:8px 0;">
+          <strong>NorCal Holistics — 4/20 Sweepstakes</strong><br>
+          2108 N St, Suite N<br>
+          Sacramento, CA 95816
+        </div>
+        <div style="font-size:11px; color:var(--mist); line-height:1.5;">
+          Entries must be postmarked by April 19, 2026 and received by April 25, 2026. Limit one entry per person. Must be 21+ and a California resident. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.6;">Official Rules</a> for full details.
+        </div>
+      </div>
     </div>
   </div>
 
@@ -935,7 +1000,7 @@
     </div>
 
     <div class="sms-consent" style="max-width:320px;margin-bottom:18px;">
-      By submitting, you agree to receive SMS messages from NorCal Holistics about 4/20 deals and promotions. Message &amp; data rates may apply. Reply STOP at any time to opt out. View our <a href="#">Privacy Policy</a> and <a href="https://norcalholistics.org/420-sweepstakes-rules/">Official Sweepstakes Rules</a>.
+      By submitting, you agree to receive SMS messages from NorCal Holistics about 4/20 deals and promotions. Message &amp; data rates may apply. Reply STOP at any time to opt out. View our <a href="https://norcalholistics.org/privacy-and-terms/">Privacy Policy</a> and <a href="https://norcalholistics.org/420-sweepstakes-rules/">Official Sweepstakes Rules</a>.
     </div>
 
     <div style="width:100%;max-width:360px;">
@@ -1309,6 +1374,16 @@ function spawnSparkles() {
     wrap.appendChild(s);
     setTimeout(() => s.remove(), (dur+delay)*1000+200);
   }
+}
+
+/* ═══════════════════════════════════════════
+   AGE GATE
+═══════════════════════════════════════════ */
+function confirmAge() {
+  document.getElementById('ageGate').classList.add('dismissed');
+}
+function denyAge() {
+  document.getElementById('ageGate').innerHTML = '<div class="age-gate-logo">NORCAL HOLISTICS</div><div class="age-gate-title" style="font-size:clamp(24px,7vw,36px);">SORRY</div><div class="age-gate-sub">You must be 21 or older to access this site.</div>';
 }
 
 /* Animate hero screen on load */
