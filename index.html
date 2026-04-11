@@ -750,6 +750,7 @@
         <div class="stp">📱</div>
         <div class="stp">🔔</div>
         <div class="stp">⏰</div>
+        <div class="stp">📸</div>
       </div>
 
       <!-- Prize Showcase -->
@@ -786,11 +787,11 @@
 
   <!-- ═══ SCREEN 1: APP ═══ -->
   <div class="screen" id="s1">
-    <div class="logo-bar"><span>NorCal Holistics ✦ Step 1 of 3</span></div>
+    <div class="logo-bar"><span>NorCal Holistics ✦ Step 1 of 4</span></div>
     <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
 
     <div class="qa" id="s1-main">
-      <div class="step-lbl">Stamp 1 of 3 · 📱</div>
+      <div class="step-lbl">Stamp 1 of 4 · 📱</div>
       <div class="big-q">Got the NorCal App?</div>
       <div class="sub">
         Orders go live at <strong>6AM sharp</strong>. The app is the fastest way to lock in your order and not miss out.
@@ -822,11 +823,11 @@
 
   <!-- ═══ SCREEN 2: PUSH NOTIFICATIONS ═══ -->
   <div class="screen" id="s2">
-    <div class="logo-bar"><span>NorCal Holistics ✦ Step 2 of 3</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div>
+    <div class="logo-bar"><span>NorCal Holistics ✦ Step 2 of 4</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:25%"></div></div>
 
     <div class="qa">
-      <div class="step-lbl">Stamp 2 of 3 · 🔔</div>
+      <div class="step-lbl">Stamp 2 of 4 · 🔔</div>
       <div class="big-q">Turn On Push Notifications</div>
       <div class="sub">
         On 4/20 we're sending <strong>exclusive flash deals</strong> through the app only — limited quantities, real-time drops. If your notifications are off, you'll miss them.
@@ -839,7 +840,7 @@
             <span>⚡</span><span><strong style="color:var(--white);">Flash Deals</strong> — limited-qty discounts pushed to your phone first</span>
           </div>
           <div style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--fog);">
-            <span>🎁</span><span><strong style="color:var(--white);">Goodie Bag Alerts</strong> — we'll notify you when the first 100 are running low</span>
+            <span>🕐</span><span><strong style="color:var(--white);">Hourly Drops</strong> — we'll drop a random deal every hour on the hour</span>
           </div>
           <div style="display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--fog);">
             <span>🔒</span><span><strong style="color:var(--white);">App-Only</strong> — these deals won't be posted anywhere else</span>
@@ -861,11 +862,11 @@
 
   <!-- ═══ SCREEN 3: ALARM ═══ -->
   <div class="screen" id="s3">
-    <div class="logo-bar"><span>NorCal Holistics ✦ Step 3 of 3</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:66%"></div></div>
+    <div class="logo-bar"><span>NorCal Holistics ✦ Step 3 of 4</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
 
     <div class="qa">
-      <div class="step-lbl">Stamp 3 of 3 · ⏰</div>
+      <div class="step-lbl">Stamp 3 of 4 · ⏰</div>
       <div class="big-q">Set Your 6AM Alarm</div>
       <div class="sub">
         First 100 orders unlock a <strong>$100 goodie bag</strong>. Add 4/20 to your calendar now — wake up ready.
@@ -880,8 +881,33 @@
     </div>
   </div>
 
-  <!-- ═══ SCREEN 4: REGISTER ═══ -->
+  <!-- ═══ SCREEN 4: FOLLOW ON SOCIAL ═══ -->
   <div class="screen" id="s4">
+    <div class="logo-bar"><span>NorCal Holistics ✦ Step 4 of 4</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+
+    <div class="qa">
+      <div class="step-lbl">Stamp 4 of 4 · 📸</div>
+      <div class="big-q">Follow Us on Instagram?</div>
+      <div class="sub">
+        We post <strong>exclusive drops, flash deals & giveaways</strong> on IG before anywhere else. Don't miss the 4/20 content.
+      </div>
+
+      <div style="width:100%; background:var(--gold-glow); border:1px solid rgba(242,194,48,.25); border-radius:13px; padding:18px 16px; margin-bottom:22px; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:.18em; color:var(--gold); margin-bottom:10px;">FOLLOW US</div>
+        <div style="font-size:13px; color:var(--fog); line-height:1.55;">
+          <strong style="color:var(--white);">@norcal_holistic</strong> — deals, drops & behind-the-scenes
+        </div>
+      </div>
+
+      <a href="https://www.instagram.com/norcal_holistic/" target="_blank" rel="noopener" class="btn-gold" style="text-decoration:none;" onclick="stampSocial(true)">📸 Follow on Instagram</a>
+      <button class="btn-gold" onclick="stampSocial(true)">✓ Already Following</button>
+      <button class="btn-ghost" onclick="stampSocial(false)">Skip →</button>
+    </div>
+  </div>
+
+  <!-- ═══ SCREEN 5: REGISTER ═══ -->
+  <div class="screen" id="s5">
     <div class="logo-bar"><span>NorCal Holistics ✦ Almost Done</span></div>
     <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
 
@@ -918,8 +944,8 @@
     </div>
   </div>
 
-  <!-- ═══ SCREEN 5: RESULTS ═══ -->
-  <div class="screen" id="s5">
+  <!-- ═══ SCREEN 6: RESULTS ═══ -->
+  <div class="screen" id="s6">
     <div class="logo-bar"><span>NorCal Holistics ✦ Your Fan Results</span></div>
     <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
 
@@ -942,6 +968,10 @@
           <div class="stamp-slot">
             <div class="stamp-circle" id="stamp2">⏰</div>
             <div class="stamp-label">Alarm Set</div>
+          </div>
+          <div class="stamp-slot">
+            <div class="stamp-circle" id="stamp3">📸</div>
+            <div class="stamp-label">Follows IG</div>
           </div>
         </div>
 
@@ -997,6 +1027,7 @@ const state = {
   hasApp:  null,
   followsIG: null,
   alarmSet: null,
+  followsSocial: null,
 };
 
 /* ═══════════════════════════════════════════
@@ -1061,6 +1092,11 @@ function stampAlarm(yes) {
   state.alarmSet = yes;
   goTo(4);
 }
+function stampSocial(yes) {
+  state.followsSocial = yes;
+  if (yes) { showCelebration(); setTimeout(() => { hideCelebration(); goTo(5); }, 1700); }
+  else goTo(5);
+}
 
 /* ═══════════════════════════════════════════
    CALENDAR
@@ -1113,8 +1149,8 @@ async function submitForm() {
   if (!phone || phone.replace(/\D/g,'').length < 10) {
     showFieldErr('inp-phone', errEl, 'Please enter a valid 10-digit phone number.'); return; }
 
-  const stamps  = [state.hasApp, state.followsIG, state.alarmSet].filter(Boolean).length;
-  const tierMap = { 0:'Fan', 1:'Fan', 2:'Loyalist', 3:'NorCal OG' };
+  const stamps  = [state.hasApp, state.followsIG, state.alarmSet, state.followsSocial].filter(Boolean).length;
+  const tierMap = { 0:'Fan', 1:'Fan', 2:'Loyalist', 3:'NorCal OG', 4:'NorCal OG' };
   const tier    = tierMap[stamps];
   const phone_clean = phone.replace(/\D/g,'');
 
@@ -1135,9 +1171,10 @@ async function submitForm() {
         first_name:         first,
         last_name:          last,
         phone:              phone_clean,
-        has_app:            state.hasApp    || false,
-        follows_instagram:  state.followsIG || false,
-        alarm_set:          state.alarmSet  || false,
+        has_app:            state.hasApp       || false,
+        follows_instagram:  state.followsIG    || false,
+        alarm_set:          state.alarmSet     || false,
+        follows_social:     state.followsSocial || false,
         stamp_count:        stamps,
         fan_tier:           tier,
       }),
@@ -1166,11 +1203,11 @@ function showFieldErr(id, el, msg) {
    RESULTS REVEAL
 ═══════════════════════════════════════════ */
 function showResults(stamps, firstName) {
-  const tiers = ['Fan', 'Fan', 'Loyalist', 'NorCal OG'];
-  const scores = ['Get the App ↑', 'NorCal Fan', 'NorCal Loyalist', 'NorCal OG 🌿'];
-  const tierLabels = ['', 'Your Tier', 'Your Tier', 'TOP TIER'];
+  const tiers = ['Fan', 'Fan', 'Loyalist', 'NorCal OG', 'NorCal OG'];
+  const scores = ['Get the App ↑', 'NorCal Fan', 'NorCal Loyalist', 'NorCal OG 🌿', 'NorCal OG 🌿'];
+  const tierLabels = ['', 'Your Tier', 'Your Tier', 'TOP TIER', 'TOP TIER'];
 
-  goTo(5);
+  goTo(6);
 
   setTimeout(() => {
     document.getElementById('fanScore').textContent  = scores[stamps];
@@ -1179,9 +1216,10 @@ function showResults(stamps, firstName) {
 
   // stamp slams — staggered
   const stampIds = [
-    { id:'stamp0', earned: state.hasApp    },
-    { id:'stamp1', earned: state.followsIG },
-    { id:'stamp2', earned: state.alarmSet  },
+    { id:'stamp0', earned: state.hasApp       },
+    { id:'stamp1', earned: state.followsIG    },
+    { id:'stamp2', earned: state.alarmSet     },
+    { id:'stamp3', earned: state.followsSocial },
   ];
   stampIds.forEach((s, i) => {
     setTimeout(() => {
@@ -1200,13 +1238,13 @@ function showResults(stamps, firstName) {
       el.classList.add('show');
       // unlock based on stamp count
       if (id === 'rw0') { el.classList.add('active'); } // everyone gets sale
-      if (id === 'rw1' && stamps >= 1) { el.classList.add('active'); document.getElementById('rw1-lock').style.display='none'; }
-      if (id === 'rw2' && stamps >= 2) { el.classList.add('active'); document.getElementById('rw2-lock').style.display='none'; }
+      if (id === 'rw1' && stamps >= 2) { el.classList.add('active'); document.getElementById('rw1-lock').style.display='none'; }
+      if (id === 'rw2' && stamps >= 3) { el.classList.add('active'); document.getElementById('rw2-lock').style.display='none'; }
     }, 900 + i * 220);
   });
 
-  // golden ticket pop if 3 stamps
-  if (stamps === 3) {
+  // golden ticket pop if all 4 stamps
+  if (stamps === 4) {
     setTimeout(() => {
       spawnSparkles();
       openGT();
