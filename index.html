@@ -668,16 +668,18 @@
     ══════════════════════════════════════ */
     .health-warning {
       position:fixed; bottom:0; left:0; right:0; z-index:90;
-      background:rgba(7,15,8,0.92);
+      background:rgba(7,15,8,0.95);
       border-top:1px solid rgba(255,255,255,0.08);
-      padding:8px 16px;
+      padding:6px 16px;
       text-align:center;
-      font-size:10px;
+      font-size:9px;
       color:var(--mist);
       letter-spacing:.02em;
       line-height:1.4;
       backdrop-filter:blur(8px);
       -webkit-backdrop-filter:blur(8px);
+      max-height:30vh;
+      overflow-y:auto;
     }
 
     /* ══════════════════════════════════════
@@ -712,7 +714,7 @@
 </div>
 
 <!-- HEALTH WARNING FOOTER -->
-<div class="health-warning">For use only by adults 21 and older. Keep out of reach of children. | License: C9-0000013-LIC</div>
+<div class="health-warning">For use only by adults 21 and older. Keep out of reach of children. | License: C9-0000013-LIC<br>WARNING: This product contains cannabis, a schedule I controlled substance. Keep out of reach of children and animals. Cannabis products may only be possessed or consumed by persons 21 years of age or older unless the person is a qualified patient. The intoxicating effects of cannabis products may be delayed up to two hours. Cannabis use while pregnant or breastfeeding may be harmful. Consumption of cannabis products impairs your ability to drive and operate machinery. Please use extreme caution.</div>
 
 <div class="app">
 
@@ -756,29 +758,27 @@
         <div class="gt-head">FIND THE<br>TICKET</div>
         <div class="gt-sub">· Hidden Inside NorCal Products ·</div>
         <div class="gt-lore">
-          Somewhere inside our products, <em>3 secrets</em> are waiting.
-          No pattern. No warning. Every NorCal item
-          you order on 4/20 is a chance.
+          Find a golden ticket in your 4/20 order? That's your sweepstakes entry! Winners are selected by random drawing from all eligible entries on April 27, 2025.
         </div>
         <div class="gt-divider"><span>THE PRIZES</span></div>
         <div class="gt-tiers">
           <div class="gt-tier gold-t"   id="gt1">
             <div class="t-badge">Golden</div>
-            <div class="t-prize"><strong>PlayStation 5</strong><span>One ticket. One winner.</span></div>
+            <div class="t-prize"><strong>PlayStation 5</strong><span>Random drawing entry.</span></div>
             <div class="t-val">$499 value</div>
           </div>
           <div class="gt-tier silver-t" id="gt2">
             <div class="t-badge">Silver</div>
-            <div class="t-prize"><strong>Puffco Peak</strong><span>One ticket. One winner.</span></div>
+            <div class="t-prize"><strong>Puffco Peak</strong><span>Random drawing entry.</span></div>
             <div class="t-val">$220 value</div>
           </div>
           <div class="gt-tier bronze-t" id="gt3">
             <div class="t-badge">Bronze</div>
-            <div class="t-prize"><strong>AirPods Pro</strong><span>One ticket. One winner.</span></div>
+            <div class="t-prize"><strong>AirPods Pro</strong><span>Random drawing entry.</span></div>
             <div class="t-val">$129 value</div>
           </div>
         </div>
-        <div class="gt-fine">Only <strong>3 tickets exist</strong> — randomly placed in NorCal products.<br>Order any NorCal item on 4/20 and you're in the draw.<br><span style="font-size:10px;opacity:.6;">No purchase necessary. Free entry via mail-in. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a>.</span></div>
+        <div class="gt-fine">Finding a ticket enters you into the random drawing — it does not guarantee a prize. Winners drawn April 27, 2025.<br><span style="font-size:10px;opacity:.6;">No purchase necessary to enter or win. Free entry via mail-in. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a>.</span></div>
       </div>
       <div class="gt-cta">
         <button class="btn-gt" onclick="closeGT()">I'm In — Show Me My Results →</button>
@@ -811,27 +811,29 @@
             <div class="t-badge" style="background:var(--gold);color:#1a0f00;">Golden</div>
             <div class="prize-name">PlayStation 5</div>
             <div class="prize-value">$499</div>
-            <div class="prize-price">yours for $0.01</div>
+            <div class="prize-price">prize value</div>
           </div>
           <div class="prize-card">
             <div class="t-badge" style="background:#b4bec8;color:#1a1a1a;">Silver</div>
             <div class="prize-name">Puffco Peak</div>
             <div class="prize-value">$220</div>
-            <div class="prize-price">yours for $0.01</div>
+            <div class="prize-price">prize value</div>
           </div>
           <div class="prize-card">
             <div class="t-badge" style="background:#b46432;color:#fff;">Bronze</div>
             <div class="prize-name">AirPods Pro</div>
             <div class="prize-value">$129</div>
-            <div class="prize-price">yours for $0.01</div>
+            <div class="prize-price">prize value</div>
           </div>
         </div>
-        <div class="prize-fine">3 tickets hidden randomly in NorCal products. Every order is a chance.</div>
+        <div class="prize-fine">Find a golden ticket in your 4/20 order? That's your sweepstakes entry! Winners are selected by random drawing from all eligible entries on April 27, 2025.</div>
       </div>
+
+      <div style="font-size:12px;color:var(--fog);margin-bottom:14px;line-height:1.5;text-align:center;">No purchase necessary to enter or win. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a> for details.</div>
 
       <button class="btn-gold" onclick="goTo(1)">Start My Checklist →</button>
       <div style="font-size:12px;color:var(--mist);margin-top:8px;">Takes about 60 seconds</div>
-      <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;">*No purchase necessary to enter or win. <a href="#freeEntry" onclick="event.preventDefault();document.getElementById('freeEntrySection').style.display='block';this.style.display='none';" style="color:var(--gold);opacity:.6;text-decoration:underline;">Free entry method available.</a> See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.6;">Official Rules</a>.</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;"><a href="#freeEntry" onclick="event.preventDefault();document.getElementById('freeEntrySection').style.display='block';this.style.display='none';" style="color:var(--gold);opacity:.6;text-decoration:underline;">Free entry method available.</a></div>
 
       <div id="freeEntrySection" style="display:none; width:100%; max-width:340px; margin-top:16px; background:var(--card-bg); border:1px solid var(--card-bdr); border-radius:11px; padding:16px; text-align:center;">
         <div style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:.15em; color:var(--gold); margin-bottom:8px;">FREE ENTRY METHOD</div>
@@ -952,11 +954,12 @@
     <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
 
     <div class="qa">
-      <div class="step-lbl">Stamp 4 of 4 · 📸</div>
+      <div class="step-lbl">Stamp 4 of 4 · 📸 (Optional)</div>
       <div class="big-q">Follow Us on Instagram?</div>
       <div class="sub">
         Stay connected with the NorCal team — <strong>behind-the-scenes, product highlights & good vibes</strong> from the crew.
       </div>
+      <div style="font-size:11px;color:var(--mist);margin-bottom:12px;text-align:center;">This step is optional and does not affect your sweepstakes entry.</div>
 
       <div style="width:100%; background:var(--gold-glow); border:1px solid rgba(242,194,48,.25); border-radius:13px; padding:18px 16px; margin-bottom:22px; text-align:center;">
         <div style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:.18em; color:var(--gold); margin-bottom:10px;">FOLLOW US</div>
@@ -978,8 +981,9 @@
 
     <div style="width:100%; max-width:360px; text-align:center; margin-bottom:18px; flex-shrink:0;">
       <div class="step-lbl">One Last Step</div>
-      <div class="big-q" style="font-size:clamp(30px,9vw,42px);">Claim Your Spot</div>
-      <div class="sub" style="margin-bottom:0;">Enter your info to lock in your fan tier and goodie bag eligibility.</div>
+      <div class="big-q" style="font-size:clamp(30px,9vw,42px);">Enter the Sweepstakes</div>
+      <div class="sub" style="margin-bottom:0;">Submit your info to enter. Winners drawn randomly from all eligible entries on April 27, 2025.</div>
+      <div style="font-size:12px;color:var(--fog);margin-top:10px;line-height:1.5;">No purchase necessary to enter or win. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a> for details.</div>
     </div>
 
     <div class="form-wrap">
@@ -999,12 +1003,19 @@
       </div>
     </div>
 
+    <div style="max-width:320px;margin-bottom:14px;text-align:left;">
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:12px;color:var(--fog);line-height:1.5;">
+        <input type="checkbox" id="sms-optin" style="margin-top:3px;flex-shrink:0;accent-color:var(--gold);">
+        <span>I agree to receive text messages from NorCal Holistics about deals and updates. Msg &amp; data rates may apply. Reply STOP to opt out.</span>
+      </label>
+    </div>
+
     <div class="sms-consent" style="max-width:320px;margin-bottom:18px;">
-      By submitting, you agree to receive SMS messages from NorCal Holistics about 4/20 deals and promotions. Message &amp; data rates may apply. Reply STOP at any time to opt out. View our <a href="https://norcalholistics.org/privacy-and-terms/">Privacy Policy</a> and <a href="https://norcalholistics.org/420-sweepstakes-rules/">Official Sweepstakes Rules</a>.
+      By entering, you agree to the <a href="https://norcalholistics.org/420-sweepstakes-rules/">Official Sweepstakes Rules</a> and <a href="https://norcalholistics.org/privacy-and-terms/">Privacy Policy</a>.
     </div>
 
     <div style="width:100%;max-width:360px;">
-      <button class="btn-gold" id="submitBtn" onclick="submitForm()">🌿 Reveal My Fan Score →</button>
+      <button class="btn-gold" id="submitBtn" onclick="submitForm()">🎫 Enter Sweepstakes →</button>
       <div id="form-error" style="font-size:12px;color:var(--red);text-align:center;margin-top:6px;display:none;"></div>
     </div>
   </div>
@@ -1060,7 +1071,7 @@
             <div class="reward-icon">🎫</div>
             <div class="reward-text">
               <strong>Golden Ticket Eligible</strong>
-              <span>3 hidden prizes in NorCal products</span>
+              <span>Random drawing entry · winners drawn April 27</span>
             </div>
             <div class="reward-lock" id="rw2-lock">🔒</div>
           </div>
@@ -1214,6 +1225,7 @@ async function submitForm() {
   if (!phone || phone.replace(/\D/g,'').length < 10) {
     showFieldErr('inp-phone', errEl, 'Please enter a valid 10-digit phone number.'); return; }
 
+  const smsOptin = document.getElementById('sms-optin').checked;
   const stamps  = [state.hasApp, state.followsIG, state.alarmSet, state.followsSocial].filter(Boolean).length;
   const tierMap = { 0:'Fan', 1:'Fan', 2:'Loyalist', 3:'NorCal OG', 4:'NorCal OG' };
   const tier    = tierMap[stamps];
@@ -1240,6 +1252,7 @@ async function submitForm() {
         follows_instagram:  state.followsIG    || false,
         alarm_set:          state.alarmSet     || false,
         follows_social:     state.followsSocial || false,
+        sms_optin:          smsOptin,
         stamp_count:        stamps,
         fan_tier:           tier,
       }),
@@ -1261,7 +1274,7 @@ function showFieldErr(id, el, msg) {
   document.getElementById(id).classList.add('err');
   el.textContent = msg; el.style.display = 'block';
   const btn = document.getElementById('submitBtn');
-  btn.disabled = false; btn.textContent = '🌿 Reveal My Fan Score →';
+  btn.disabled = false; btn.textContent = '🎫 Enter Sweepstakes →';
 }
 
 /* ═══════════════════════════════════════════
