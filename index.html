@@ -667,19 +667,15 @@
        HEALTH WARNING FOOTER
     ══════════════════════════════════════ */
     .health-warning {
-      position:fixed; bottom:0; left:0; right:0; z-index:90;
-      background:rgba(7,15,8,0.95);
+      width:100%;
+      margin-top:28px;
+      padding:14px 16px 8px;
       border-top:1px solid rgba(255,255,255,0.08);
-      padding:6px 16px;
       text-align:center;
       font-size:9px;
       color:var(--mist);
       letter-spacing:.02em;
       line-height:1.4;
-      backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
-      max-height:30vh;
-      overflow-y:auto;
     }
 
     /* ══════════════════════════════════════
@@ -712,9 +708,6 @@
   <button class="age-gate-deny" onclick="denyAge()">No, I'm Under 21</button>
   <div class="age-gate-warn">For use only by adults 21 and older. Keep out of reach of children.</div>
 </div>
-
-<!-- HEALTH WARNING FOOTER -->
-<div class="health-warning">For use only by adults 21 and older. Keep out of reach of children. | License: C9-0000013-LIC<br>WARNING: This product contains cannabis, a schedule I controlled substance. Keep out of reach of children and animals. Cannabis products may only be possessed or consumed by persons 21 years of age or older unless the person is a qualified patient. The intoxicating effects of cannabis products may be delayed up to two hours. Cannabis use while pregnant or breastfeeding may be harmful. Consumption of cannabis products impairs your ability to drive and operate machinery. Please use extreme caution.</div>
 
 <div class="app">
 
@@ -1100,6 +1093,17 @@
 ═══════════════════════════════════════════ */
 const SUPABASE_URL     = 'https://imboukymceqadssuodlw.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltYm91a3ltY2VxYWRzc3VvZGx3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ5MTY1MzgsImV4cCI6MjA5MDQ5MjUzOH0.Gvuk6GvAxbgJAm3MrnryiRC4LoVatAkYxgfkuEdx5g8';
+
+/* ═══════════════════════════════════════════
+   HEALTH WARNING (append to each screen)
+═══════════════════════════════════════════ */
+const HEALTH_WARNING_HTML = 'For use only by adults 21 and older. Keep out of reach of children. | License: C9-0000013-LIC<br>WARNING: This product contains cannabis, a schedule I controlled substance. Keep out of reach of children and animals. Cannabis products may only be possessed or consumed by persons 21 years of age or older unless the person is a qualified patient. The intoxicating effects of cannabis products may be delayed up to two hours. Cannabis use while pregnant or breastfeeding may be harmful. Consumption of cannabis products impairs your ability to drive and operate machinery. Please use extreme caution.';
+document.querySelectorAll('.screen').forEach(s => {
+  const w = document.createElement('div');
+  w.className = 'health-warning';
+  w.innerHTML = HEALTH_WARNING_HTML;
+  s.appendChild(w);
+});
 
 /* ═══════════════════════════════════════════
    STATE
