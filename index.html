@@ -825,14 +825,14 @@
         </div>
         <button class="btn-gold" style="margin-top:18px;" onclick="goTo(1)">Start My Registration →</button>
         <div style="font-size:12px;color:var(--mist);margin-top:8px;text-align:center;">Takes about 60 seconds</div>
-        <div style="text-align:center;margin-top:10px;"><a href="#seeMore" id="seeMoreToggle" onclick="event.preventDefault();var s=document.getElementById('seeMoreSection');var shown=s.style.display==='block';s.style.display=shown?'none':'block';this.textContent=shown?'See more':'See less';" style="font-size:12px;color:var(--gold);opacity:.85;text-decoration:underline;">See more</a></div>
+        <div style="text-align:center;margin-top:10px;"><a href="#seeMore" id="seeMoreToggle" onclick="event.preventDefault();var s=document.getElementById('seeMoreSection');var f=document.getElementById('freeEntryLink');var shown=s.style.display==='block';s.style.display=shown?'none':'block';f.style.display=shown?'none':'block';this.textContent=shown?'See more':'See less';" style="font-size:12px;color:var(--gold);opacity:.85;text-decoration:underline;">See more</a></div>
         <div id="seeMoreSection" style="display:none;">
           <div class="prize-fine" style="margin-top:18px;">Find a Golden Ticket in your order? Call us immediately at <strong>916-993-5361</strong> — you'll receive 100 entries into the drawing. Silver Ticket = 50 entries. Bronze Ticket = 25 entries.<br><br>Tickets are hidden in NorCal Holistics orders placed <strong>April 13–20</strong>. One could already be on its way to you.</div>
           <div style="font-size:12px;color:var(--fog);margin-top:14px;line-height:1.5;text-align:center;">No purchase necessary to enter or win. Purchasing a NorCal Holistics product may result in discovery of a physical ticket which grants additional entries. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a> for details.</div>
         </div>
       </div>
 
-      <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;"><a href="#freeEntry" onclick="event.preventDefault();document.getElementById('freeEntrySection').style.display='block';this.style.display='none';" style="color:#555;text-decoration:underline;">Free entry method available.</a></div>
+      <div id="freeEntryLink" style="display:none;font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;"><a href="#freeEntry" onclick="event.preventDefault();document.getElementById('freeEntrySection').style.display='block';this.style.display='none';" style="color:#555;text-decoration:underline;">Free entry method available.</a></div>
 
       <div id="freeEntrySection" style="display:none; width:100%; max-width:340px; margin-top:16px; background:var(--card-bg); border:1px solid var(--card-bdr); border-radius:11px; padding:16px; text-align:center;">
         <div style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:.15em; color:var(--gold); margin-bottom:8px;">FREE ENTRY METHOD</div>
