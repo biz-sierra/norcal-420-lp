@@ -1014,8 +1014,11 @@
     <div style="width:100%;max-width:360px;">
       <button class="btn-gold" id="submitBtn" onclick="submitForm()">🎫 Enter Sweepstakes →</button>
       <div id="form-error" style="font-size:12px;color:var(--red);text-align:center;margin-top:6px;display:none;"></div>
-      <p style="font-size:12px;color:var(--fog);margin-top:18px;margin-bottom:0;line-height:1.5;text-align:center;">No purchase necessary to enter or win. Purchasing a NorCal Holistics product may result in discovery of a physical ticket which grants additional entries.<span id="fine-print-more" style="display:none;"> Submit your info to enter. Winners selected by drawing on April 27, 2026.</span> <a href="#" id="fine-print-toggle" style="color:var(--gold);opacity:.85;" onclick="event.preventDefault();var m=document.getElementById('fine-print-more'),t=this;if(m.style.display==='none'){m.style.display='inline';t.textContent='see less';}else{m.style.display='none';t.textContent='see more';}">see more</a></p>
-      <div style="font-size:12px;margin-top:6px;text-align:center;"><a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.85;">Official Rules</a></div>
+      <div style="text-align:center;margin-top:14px;"><a href="#" id="fine-print-toggle" style="font-size:12px;color:var(--gold);opacity:.85;" onclick="event.preventDefault();var m=document.getElementById('fine-print-more'),t=this;if(m.style.display==='none'){m.style.display='block';t.textContent='see less';}else{m.style.display='none';t.textContent='see more';}">see more</a></div>
+      <div id="fine-print-more" style="display:none;margin-top:10px;">
+        <p style="font-size:12px;color:var(--fog);margin:0;line-height:1.5;text-align:center;">No purchase necessary to enter or win. Purchasing a NorCal Holistics product may result in discovery of a physical ticket which grants additional entries. Submit your info to enter. Winners selected by drawing on April 27, 2026.</p>
+        <div style="font-size:12px;margin-top:6px;text-align:center;"><a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.85;">Official Rules</a></div>
+      </div>
     </div>
   </div>
 
