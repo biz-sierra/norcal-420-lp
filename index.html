@@ -1313,7 +1313,7 @@ function showResults(stamps, firstName) {
         document.getElementById(s.id).classList.add('earned');
         spawnConfetti(5);
       }
-    }, 450 + i * 320);
+    }, 225 + i * 160);
   });
 
   // reward rows
@@ -1326,7 +1326,7 @@ function showResults(stamps, firstName) {
       if (id === 'rw0') { el.classList.add('active'); } // everyone gets sale
       if (id === 'rw1' && stamps >= 2) { el.classList.add('active'); document.getElementById('rw1-lock').style.display='none'; }
       if (id === 'rw2' && stamps >= 3) { el.classList.add('active'); document.getElementById('rw2-lock').style.display='none'; }
-    }, 900 + i * 220);
+    }, 450 + i * 110);
   });
 
   // golden ticket pop if all 4 stamps
@@ -1334,7 +1334,7 @@ function showResults(stamps, firstName) {
     setTimeout(() => {
       spawnSparkles();
       openGT();
-    }, 2600);
+    }, 1300);
   }
 }
 
@@ -1370,8 +1370,8 @@ function spawnConfetti(n = 60) {
     const p = document.createElement('div');
     p.className = 'cp';
     const size  = Math.random()*9+5;
-    const dur   = Math.random()*1.4+1;
-    const delay = Math.random()*0.7;
+    const dur   = Math.random()*0.7+0.5;
+    const delay = Math.random()*0.35;
     const color = colors[Math.floor(Math.random()*colors.length)];
     const radius= Math.random()>.45?'50%':(Math.random()>.5?'2px':'0');
     p.style.cssText=`left:${Math.random()*100}%;width:${size}px;height:${size}px;background:${color};border-radius:${radius};animation:cpFall ${dur}s ${delay}s ease-in forwards;`;
@@ -1387,8 +1387,8 @@ function spawnSparkles() {
     const s = document.createElement('div');
     s.className = 'spark';
     const size = Math.random()*5+2;
-    const dur  = Math.random()*1.2+0.8;
-    const delay= Math.random()*0.9;
+    const dur  = Math.random()*0.6+0.4;
+    const delay= Math.random()*0.45;
     const dx   = (Math.random()-.5)*200+'px';
     const dy   = (Math.random()-.5)*250+'px';
     s.style.cssText=`left:${Math.random()*100}%;top:${20+Math.random()*60}%;width:${size}px;height:${size}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>.5?'50%':'2px'};--dx:${dx};--dy:${dy};animation:spFloat ${dur}s ${delay}s ease-out forwards;`;
