@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#070f08">
-  <title>NorCal Holistics — 4/20 Fan Registration</title>
+  <title>NorCal Holistics — 4/20 Sweepstakes: Still Unclaimed</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -613,6 +613,110 @@
     }
 
     /* ══════════════════════════════════════
+       UNCLAIMED TICKETS (post-entry state)
+    ══════════════════════════════════════ */
+    .unclaimed-header {
+      font-family:'Bebas Neue',sans-serif; font-size:20px;
+      letter-spacing:.14em; color:var(--gold); margin:4px 0 2px; text-align:center;
+    }
+    .unclaimed-sub {
+      font-size:12px; color:var(--fog); text-align:center;
+      letter-spacing:.06em; margin-bottom:14px;
+    }
+    .floating-tickets {
+      display:flex; gap:10px; justify-content:center;
+      margin:6px 0 16px; padding:8px 0 16px;
+    }
+    .float-ticket {
+      position:relative;
+      flex:1; max-width:110px;
+      background:linear-gradient(160deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+      border:1px dashed rgba(255,255,255,.22);
+      border-radius:12px; padding:14px 8px 12px;
+      display:flex; flex-direction:column; align-items:center; gap:3px;
+      filter:grayscale(.85) brightness(.65);
+      animation:floatY 4.2s ease-in-out infinite;
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+    .float-ticket:nth-child(1) { animation-delay:0s; }
+    .float-ticket:nth-child(2) { animation-delay:.7s; }
+    .float-ticket:nth-child(3) { animation-delay:1.4s; }
+    .ft-badge {
+      font-size:9px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+      padding:2px 7px; border-radius:4px; margin-bottom:2px;
+    }
+    .float-ticket.ft-gold   .ft-badge { background:var(--gold); color:#1a0f00; }
+    .float-ticket.ft-silver .ft-badge { background:#b4bec8; color:#1a1a1a; }
+    .float-ticket.ft-bronze .ft-badge { background:#b46432; color:#fff; }
+    .ft-prize { font-size:11.5px; font-weight:700; color:#fff; line-height:1.2; text-align:center; }
+    .ft-val { font-family:'Bebas Neue',sans-serif; font-size:22px; color:var(--gold); line-height:1; margin-top:2px; opacity:.7; }
+    .ft-stamp {
+      position:absolute; top:50%; left:50%;
+      transform:translate(-50%,-50%) rotate(-16deg);
+      font-family:'Bebas Neue',sans-serif;
+      font-size:12px; letter-spacing:.2em;
+      color:#ff6b6b; border:2px solid #ff6b6b;
+      padding:3px 8px; border-radius:4px;
+      background:rgba(0,0,0,.55);
+      white-space:nowrap; pointer-events:none;
+      text-shadow:0 1px 2px rgba(0,0,0,.6);
+    }
+    @keyframes floatY {
+      0%, 100% { translate:0 0; }
+      50%      { translate:0 -9px; }
+    }
+
+    .status-bar {
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      background:rgba(255,107,107,.08);
+      border:1px solid rgba(255,107,107,.28);
+      border-radius:10px; padding:10px 14px;
+      margin:2px auto 16px; width:fit-content;
+    }
+    .status-dot {
+      width:9px; height:9px; border-radius:50%; background:#ff6b6b;
+      box-shadow:0 0 0 0 rgba(255,107,107,.55);
+      animation:pulseDot 2s infinite;
+    }
+    .status-text { font-size:13px; color:var(--white); letter-spacing:.02em; }
+    .status-text strong { color:#ff8a8a; }
+    @keyframes pulseDot {
+      0%   { box-shadow:0 0 0 0 rgba(255,107,107,.55); }
+      70%  { box-shadow:0 0 0 10px rgba(255,107,107,0); }
+      100% { box-shadow:0 0 0 0 rgba(255,107,107,0); }
+    }
+
+    .announcement {
+      background:linear-gradient(135deg, rgba(242,194,48,.07), rgba(242,194,48,.02));
+      border:1px solid rgba(242,194,48,.28);
+      border-radius:13px;
+      padding:16px 16px 18px;
+      max-width:360px; margin:0 auto;
+    }
+    .announce-header {
+      font-family:'Bebas Neue',sans-serif;
+      font-size:14px; letter-spacing:.2em;
+      color:var(--gold); text-align:center; margin-bottom:10px;
+    }
+    .announce-body {
+      font-size:13.5px; color:var(--fog); line-height:1.6; text-align:center;
+    }
+    .announce-body strong { color:var(--white); }
+    .announce-body .tel { color:var(--gold); font-weight:700; text-decoration:none; white-space:nowrap; }
+    .announce-divider {
+      height:1px; background:rgba(242,194,48,.18);
+      margin:12px auto; max-width:160px;
+    }
+    .draw-date {
+      text-align:center; font-size:13px; color:var(--white); margin-top:6px;
+    }
+    .draw-date strong { color:var(--gold); letter-spacing:.04em; }
+    .check-back {
+      text-align:center; font-size:12.5px; color:var(--mist);
+      margin-top:14px; letter-spacing:.04em;
+    }
+
+    /* ══════════════════════════════════════
        ENTRANCE ANIMATIONS
     ══════════════════════════════════════ */
     @keyframes slideUp {
@@ -782,71 +886,64 @@
     </div>
   </div>
 
-  <!-- ═══ SCREEN 0: HERO ═══ -->
+  <!-- ═══ SCREEN 0: POST-ENTRY STATUS ═══ -->
   <div class="screen active" id="s0">
-    <div class="logo-bar"><span>NorCal Holistics ✦ 4/20 Event</span></div>
+    <div class="logo-bar"><span>NorCal Holistics ✦ 4/20 Sweepstakes</span></div>
     <div class="qa" style="padding-top:10px;">
-      <div class="hero-badge">✦ Monday April 20th · Sacramento</div>
-      <div class="hero-title">4/20</div>
-      <div class="hero-year">SALE 2026</div>
+      <div class="hero-badge">✦ Entry Period Closed</div>
+      <div class="hero-title">STILL</div>
+      <div class="hero-year">UNCLAIMED</div>
       <div class="hero-desc">
-        Complete the <strong>NorCal 4/20 Registration Checklist</strong> below to qualify for the golden ticket sweepstakes, unlock exclusive app rewards, and find out your fan score!
+        All <strong>3 tickets</strong> went out in orders — but <strong>none have been redeemed yet.</strong> They're still floating out there, waiting to be found.
       </div>
-      <div class="stamp-preview">
-        <div class="stp">📱</div>
-        <div class="stp">🔔</div>
-        <div class="stp">⏰</div>
-        <div class="stp">📸</div>
-      </div>
-      <div style="text-align:center; font-size:13px; color:#ff4d4d; font-weight:600; margin:10px 0 4px;">You must submit this form to qualify.</div>
 
-      <!-- Prize Showcase -->
-      <div class="prize-showcase">
-        <div class="prize-header">FIND THE GOLDEN TICKET</div>
-        <div class="prize-cards">
-          <div class="prize-card">
-            <div class="t-badge" style="background:var(--gold);color:#1a0f00;">Golden</div>
-            <div class="prize-name">PlayStation 5</div>
-            <div class="prize-value">$499</div>
-            <div class="prize-price">prize value</div>
-          </div>
-          <div class="prize-card">
-            <div class="t-badge" style="background:#b4bec8;color:#1a1a1a;">Silver</div>
-            <div class="prize-name">Puffco Peak</div>
-            <div class="prize-value">$220</div>
-            <div class="prize-price">prize value</div>
-          </div>
-          <div class="prize-card">
-            <div class="t-badge" style="background:#b46432;color:#fff;">Bronze</div>
-            <div class="prize-name">AirPods Pro</div>
-            <div class="prize-value">$129</div>
-            <div class="prize-price">prize value</div>
-          </div>
+      <div class="unclaimed-header">THE UNCLAIMED THREE</div>
+      <div class="unclaimed-sub">Somewhere in Sacramento · still sealed</div>
+
+      <div class="floating-tickets">
+        <div class="float-ticket ft-gold">
+          <div class="ft-badge">Golden</div>
+          <div class="ft-prize">PlayStation 5</div>
+          <div class="ft-val">$499</div>
+          <div class="ft-stamp">UNCLAIMED</div>
         </div>
-        <button class="btn-gold" style="margin-top:18px;" onclick="goTo(1)">Start My Registration →</button>
-        <div style="font-size:12px;color:var(--mist);margin-top:8px;text-align:center;">Takes about 60 seconds</div>
-        <div style="text-align:center;margin-top:10px;"><a href="#seeMore" id="seeMoreToggle" onclick="event.preventDefault();var s=document.getElementById('seeMoreSection');var f=document.getElementById('freeEntryLink');var shown=s.style.display==='block';s.style.display=shown?'none':'block';f.style.display=shown?'none':'block';this.textContent=shown?'See more':'See less';" style="font-size:12px;color:var(--gold);opacity:.85;text-decoration:underline;">See more</a></div>
-        <div id="seeMoreSection" style="display:none;">
-          <div class="prize-fine" style="margin-top:18px;">Find a Golden Ticket in your order? Call us immediately at <strong>916-993-5361</strong> — you'll receive 100 entries into the drawing. Silver Ticket = 50 entries. Bronze Ticket = 25 entries.<br><br>Tickets are hidden in NorCal Holistics orders placed <strong>April 13–20</strong>. One could already be on its way to you.</div>
-          <div style="font-size:12px;color:var(--fog);margin-top:14px;line-height:1.5;text-align:center;">No purchase necessary to enter or win. Purchasing a NorCal Holistics product may result in discovery of a physical ticket which grants additional entries. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.7;">Official Rules</a> for details.</div>
+        <div class="float-ticket ft-silver">
+          <div class="ft-badge">Silver</div>
+          <div class="ft-prize">Puffco Peak</div>
+          <div class="ft-val">$220</div>
+          <div class="ft-stamp">UNCLAIMED</div>
+        </div>
+        <div class="float-ticket ft-bronze">
+          <div class="ft-badge">Bronze</div>
+          <div class="ft-prize">AirPods Pro</div>
+          <div class="ft-val">$129</div>
+          <div class="ft-stamp">UNCLAIMED</div>
         </div>
       </div>
 
-      <div id="freeEntryLink" style="display:none;font-size:10px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.4;"><a href="#freeEntry" onclick="event.preventDefault();document.getElementById('freeEntrySection').style.display='block';this.style.display='none';" style="color:#555;text-decoration:underline;">Free entry method available.</a></div>
+      <div class="status-bar">
+        <div class="status-dot"></div>
+        <div class="status-text"><strong>0 of 3</strong> tickets redeemed</div>
+      </div>
 
-      <div id="freeEntrySection" style="display:none; width:100%; max-width:340px; margin-top:16px; background:var(--card-bg); border:1px solid var(--card-bdr); border-radius:11px; padding:16px; text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:.15em; color:var(--gold); margin-bottom:8px;">FREE ENTRY METHOD</div>
-        <div style="font-size:12px; color:var(--fog); line-height:1.55; margin-bottom:4px;">
-          To enter the Golden Ticket Sweepstakes without making a purchase, hand-print your full name, phone number, and the words "Golden Ticket Entry" on a 3"×5" card and mail it to:
+      <div class="announcement">
+        <div class="announce-header">📣 ANNOUNCEMENT</div>
+        <div class="announce-body">
+          Entries are officially <strong>closed.</strong> We know with <strong>100% certainty</strong> that all three physical tickets went out in orders — someone is holding them right now. They just haven't called in yet.
+          <div class="announce-divider"></div>
+          <strong>Think you have a ticket?</strong><br>
+          Call <a href="tel:19169935361" class="tel">916-993-5361</a> to claim your bonus entries before the drawing.
         </div>
-        <div style="font-size:12px; color:var(--white); line-height:1.55; margin:8px 0;">
-          <strong>NorCal Holistics — 4/20 Sweepstakes</strong><br>
-          2108 N St, Suite N<br>
-          Sacramento, CA 95816
-        </div>
-        <div style="font-size:11px; color:var(--mist); line-height:1.5;">
-          Entries must be postmarked by April 19, 2026 and received by April 25, 2026. Limit one entry per person. Must be 21+ and a California resident. See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.6;">Official Rules</a> for full details.
-        </div>
+      </div>
+
+      <div class="draw-date">
+        If no one claims them, we draw winners <strong>Monday, April 27</strong> — everyone registered still has a chance.
+      </div>
+
+      <div class="check-back">Keep checking back for live updates.</div>
+
+      <div style="font-size:11px;color:rgba(255,255,255,.25);margin-top:22px;line-height:1.5;text-align:center;max-width:320px;margin-left:auto;margin-right:auto;">
+        See <a href="https://norcalholistics.org/420-sweepstakes-rules/" style="color:var(--gold);opacity:.55;">Official Rules</a> for full details. Must be 21+ and a California resident.
       </div>
     </div>
   </div>
